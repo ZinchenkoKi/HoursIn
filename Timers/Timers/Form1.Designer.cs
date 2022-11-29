@@ -66,10 +66,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(4, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(3, 59);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 38);
+            this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -81,10 +80,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(436, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(306, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 94);
+            this.label4.Size = new System.Drawing.Size(49, 56);
             this.label4.TabIndex = 3;
             this.label4.Text = ":";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -95,10 +93,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(259, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(182, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 94);
+            this.label3.Size = new System.Drawing.Size(118, 56);
             this.label3.TabIndex = 2;
             this.label3.Text = "00";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,10 +106,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(181, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(127, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 94);
+            this.label2.Size = new System.Drawing.Size(49, 56);
             this.label2.TabIndex = 1;
             this.label2.Text = ":";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,10 +119,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 94);
+            this.label1.Size = new System.Drawing.Size(118, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "00";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,10 +132,9 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(514, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(361, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 94);
+            this.label5.Size = new System.Drawing.Size(120, 56);
             this.label5.TabIndex = 4;
             this.label5.Text = "00";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,7 +142,6 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.BackgroundImage = global::Timers.Properties.Resources._13;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
@@ -165,14 +158,13 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(691, 142);
-            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(691, 142);
+            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(484, 85);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(484, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(691, 142);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(484, 85);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button2
@@ -182,10 +174,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(514, 99);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(361, 59);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 38);
+            this.button2.Size = new System.Drawing.Size(113, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
@@ -236,14 +227,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel1.BackgroundImage = global::Timers.Properties.Resources._13;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 142);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 193);
+            this.panel1.Size = new System.Drawing.Size(482, 116);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -256,12 +245,11 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 28);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 17);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(683, 165);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(482, 99);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -274,14 +262,13 @@
             this.tableLayoutPanel4.Controls.Add(this.label7, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.label10, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(217, 5);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(153, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(462, 155);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(326, 93);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label6
@@ -290,10 +277,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(4, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(223, 48);
+            this.label6.Size = new System.Drawing.Size(157, 29);
             this.label6.TabIndex = 0;
             this.label6.Text = "Programming";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -304,10 +290,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(235, 48);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(166, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 48);
+            this.label7.Size = new System.Drawing.Size(157, 29);
             this.label7.TabIndex = 1;
             this.label7.Text = "Всего часов";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -318,10 +303,9 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(235, 96);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(166, 58);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(223, 59);
+            this.label10.Size = new System.Drawing.Size(157, 35);
             this.label10.TabIndex = 2;
             this.label10.Text = "Часов за сегодня";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -332,24 +316,24 @@
             this.panel2.BackgroundImage = global::Timers.Properties.Resources.c_logo_black1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 5);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 155);
+            this.panel2.Size = new System.Drawing.Size(144, 93);
             this.panel2.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.BackgroundImage = global::Timers.Properties.Resources._13;
-            this.ClientSize = new System.Drawing.Size(683, 434);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(482, 438);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(705, 796);
-            this.MinimumSize = new System.Drawing.Size(705, 363);
+            this.HelpButton = true;
+            this.MaximumSize = new System.Drawing.Size(498, 493);
+            this.MinimumSize = new System.Drawing.Size(498, 233);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
