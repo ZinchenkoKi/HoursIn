@@ -126,37 +126,5 @@ namespace Timers
                 writer.WriteLine(valuesFile.secondFile);
             }
         }
-    }
-
-
-
-    //Helleo World();
-
-
-   
-
-
-    struct valuesTamer // значение времени таймера
-    {
-        public int hourTimer, minuteTimer, secondTimer;
-
-        public valuesTamer(int hourTimer, int minuteTimer, int secondTimer)
-        {
-            this.hourTimer = hourTimer;
-            this.minuteTimer = minuteTimer;
-            this.secondTimer = secondTimer;
-        }
-    }
-
-    struct valuesFile //заначение времени в файле
-    {
-        public int hourFile, minuteFile, secondFile;
-
-        public valuesFile(int hourFile, int minuteFile, int secondFile)
-        {
-            this.hourFile = hourFile;
-            this.minuteFile = minuteFile;
-            this.secondFile = secondFile;
-        }
-    }
+    }  
 }
