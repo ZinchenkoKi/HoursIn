@@ -1,5 +1,5 @@
 using System.IO;
-
+using Timers.Entities;
 
 namespace Timers
 {
@@ -11,7 +11,10 @@ namespace Timers
             timer1.Interval = 1000; 
             timerOperation t = new timerOperation();
             label7.Text = t.allHours() + "ч. всего";
+            using (var context = new Context())
+            {
 
+            }
 
         }
 

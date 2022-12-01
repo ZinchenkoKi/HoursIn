@@ -232,7 +232,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 85);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 116);
+            this.panel1.Size = new System.Drawing.Size(476, 116);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -249,7 +249,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(482, 99);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(476, 99);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -262,13 +262,13 @@
             this.tableLayoutPanel4.Controls.Add(this.label7, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.label10, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(153, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(151, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(326, 93);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(322, 93);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label6
@@ -279,7 +279,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 29);
+            this.label6.Size = new System.Drawing.Size(155, 29);
             this.label6.TabIndex = 0;
             this.label6.Text = "Programming";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -290,9 +290,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(166, 29);
+            this.label7.Location = new System.Drawing.Point(164, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 29);
+            this.label7.Size = new System.Drawing.Size(155, 29);
             this.label7.TabIndex = 1;
             this.label7.Text = "Всего часов";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -303,9 +303,9 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(166, 58);
+            this.label10.Location = new System.Drawing.Point(164, 58);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 35);
+            this.label10.Size = new System.Drawing.Size(155, 35);
             this.label10.TabIndex = 2;
             this.label10.Text = "Часов за сегодня";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -318,7 +318,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 93);
+            this.panel2.Size = new System.Drawing.Size(142, 93);
             this.panel2.TabIndex = 1;
             // 
             // Form1
@@ -327,7 +327,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.BackgroundImage = global::Timers.Properties.Resources._13;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(482, 438);
+            this.ClientSize = new System.Drawing.Size(476, 437);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
