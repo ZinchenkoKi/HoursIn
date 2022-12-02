@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
 using Timers.Entities;
 
@@ -15,6 +16,20 @@ namespace Timers
             {
 
             }
+
+            using (Context addTimes = new Context())
+            {
+                fileTime programing = new fileTime { Hours = 8, Minute = 34, Second = 5 };
+                addTimes.fileTimes.Add(programing);
+                addTimes.SaveChanges();
+            }
+
+            using (Context reedContext = new Context())
+            {
+                var filetimeq = reedContext.fileTimes.ToList();
+               label1.Text= filetimeq.Count.ToString();
+            }
+
 
         }
 

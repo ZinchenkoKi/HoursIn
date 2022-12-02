@@ -16,9 +16,9 @@ namespace Timers.Entities
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(@"host=localhost;port=5432;database=Timers;username=postgres;password=lwk4e5jwdcjs;");
+            optionsBuilder.UseNpgsql(@"host=localhost;port=5432;database=Timers;username=postgres;password=1234567;");
         }
-        
-       public DbSet<fileTime> fileTimes { get; set; }
+
+        public DbSet<fileTime> fileTimes { get; set; } = null!;
     }
 }
