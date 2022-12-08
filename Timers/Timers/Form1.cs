@@ -11,50 +11,32 @@ namespace Timers
             InitializeComponent();
             timer1.Interval = 1000; 
             timerOperation t = new timerOperation();
-            label7.Text = t.allHours() + "÷. âñåãî";
-            using (var context = new Context())
-            {
+            label6.Text = t.allHours() + "÷. âñåãî";
+            //using (var context = new Context())
+            //{
 
-            }
+            //}
 
-            using (Context addTimes = new Context())
-            {
-                fileTime programing = new fileTime { Hours = 8, Minute = 34, Second = 5 };
-                addTimes.fileTimes.Add(programing);
-                addTimes.SaveChanges();
-            }
+            //using (Context addTimes = new Context())
+            //{
+            //    fileTime programing = new fileTime { Hours = 8, Minute = 34, Second = 5 };
+            //    addTimes.fileTimes.Add(programing);
+            //    addTimes.SaveChanges();
+            //}
 
-            using (Context reedContext = new Context())
-            {
-                var filetimeq = reedContext.fileTimes.ToList();
-               label1.Text= filetimeq.Count.ToString();
-            }
+            //using (Context reedContext = new Context())
+            //{
+            //    var filetimeq = reedContext.fileTimes.ToList();
+            //   label1.Text= filetimeq.Count.ToString();
+            //}
 
 
         }
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)  // strart timer
-        {
-           timervalues(button1);
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            timerOperation t = new timerOperation();
-            t.saveTimer();
-            this.Close();
-        }
-
-        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timerOperation t = new timerOperation();
-            t.timerÑounting(label5, label3, label1);
+            t.timerÑounting(label3, label2, label1);
         }
 
 
@@ -72,6 +54,28 @@ namespace Timers
                 one.Text = "Start";
                 timer1.Enabled = false;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) // strart timer
+        {
+            timervalues(button1);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            timerOperation t = new timerOperation();
+            t.saveTimer();
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }
