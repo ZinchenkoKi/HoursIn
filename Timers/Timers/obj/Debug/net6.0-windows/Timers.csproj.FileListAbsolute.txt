@@ -135,3 +135,10 @@ D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Microsoft.Extensions.
 D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Npgsql.dll
 D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Progects\HoursIn\Timers\Timers\obj\Debug\net6.0-windows\Timers.csproj.CopyComplete
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Humanizer.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\Progects\HoursIn\Timers\Timers\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

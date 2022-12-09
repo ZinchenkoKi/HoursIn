@@ -9,31 +9,11 @@ namespace Timers
         public Form1()
         {
             InitializeComponent();
-            timer1.Interval = 1000; 
+            timer1.Interval = 1000;
             timerOperation t = new timerOperation();
-            label6.Text = t.allHours() + "÷. âñåãî";
-            //using (var context = new Context())
-            //{
-
-            //}
-
-            //using (Context addTimes = new Context())
-            //{
-            //    fileTime programing = new fileTime { Hours = 8, Minute = 34, Second = 5 };
-            //    addTimes.fileTimes.Add(programing);
-            //    addTimes.SaveChanges();
-            //}
-
-            //using (Context reedContext = new Context())
-            //{
-            //    var filetimeq = reedContext.fileTimes.ToList();
-            //   label1.Text= filetimeq.Count.ToString();
-            //}
-
-
+            label6.Text = t.allHours() + " ÷àñîâ âñåãî";
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+            private void timer1_Tick(object sender, EventArgs e)
         {
             timerOperation t = new timerOperation();
             t.timerÑounting(label3, label2, label1);
@@ -73,9 +53,14 @@ namespace Timers
             this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e) // add new task
         {
-
+            //using (Context add = new Context()) //add values time
+            //{
+            //    timeValueInFile timeValueInFile = new timeValueInFile { Hours = 12, Minute = 23, Second = 33 };
+            //    add.timeValueInFiles.Add(timeValueInFile);
+            //    add.SaveChanges();
+            //}
         }
     } 
 }

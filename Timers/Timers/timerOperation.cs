@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Timers.Entities;
 
 
 
@@ -13,26 +14,13 @@ namespace Timers
     {
         static valuesTamer valuesTamer = new valuesTamer(0, 0, 0);
         static valuesFile valuesFile = new valuesFile(0, 0, 0);
-        
-        public string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "time.txt"); // относительный путь файла
 
         public int allHours()
         {
-          reedfiles(ref valuesFile);
+            reedfiles(ref valuesFile);
             int d = valuesFile.hourFile;
             return d;
         }
-
-        ///Автосэйв доработать
-
-        //public void avtoSave(Label label)  // автосохранение времени 
-        //{
-        //    if (label.Text == "30")
-        //    {
-        //        saveTimer();
-        //    }
-        //}
-
 
         public void saveTimer() // сохранение времени
         {
@@ -63,7 +51,6 @@ namespace Timers
             if (valuesTamer.secondTimer < 59)
             {
                 timevalues(ref valuesTamer.secondTimer, labelOne);
-                //avtoSave(labelOne);
             }
             else
             {
@@ -94,17 +81,17 @@ namespace Timers
         }
         void reedfiles(ref valuesFile valuesFile)  // считывние времени из файла
         {
-            using (FileStream stream = new FileStream(filepath, FileMode.OpenOrCreate))
-            using (StreamReader reed = new StreamReader(stream))
+            using (Context reed = new Context()) // reed values file
             {
-                valuesFile.hourFile = Convert.ToInt32(reed.ReadLine());
-                valuesFile.minuteFile = Convert.ToInt32(reed.ReadLine());
-                valuesFile.secondFile = Convert.ToInt32(reed.ReadLine());
-            }
+                var times = reed.timeValueInFiles.ToList();
+                foreach (timeValueInFile u in times)
+                {
+                    valuesFile.hourFile = u.Hours;
+                    valuesFile.minuteFile = u.Minute;
+                    valuesFile.secondFile = u.Second;
+                }
+            } 
         }
-
-
-
 
         valuesFile sumTimes(ref valuesFile valuesFile, ref valuesTamer valuesTamer) // суммирование времени таймера
         {
@@ -114,16 +101,19 @@ namespace Timers
             return valuesFile;
         }
 
-
-
         void writeInFile(ref valuesFile valuesFile) // записть времени в файл
         {
-            using (FileStream stream = new FileStream(filepath, FileMode.Create))
-            using (StreamWriter writer = new StreamWriter(stream))
+            using (Context update = new Context())
             {
-                writer.WriteLine(valuesFile.hourFile);
-                writer.WriteLine(valuesFile.minuteFile);
-                writer.WriteLine(valuesFile.secondFile);
+                timeValueInFile? timeValueInFile = update.timeValueInFiles.FirstOrDefault();
+                if (timeValueInFile != null)
+                {
+                    timeValueInFile.Hours = valuesFile.hourFile;
+                    timeValueInFile.Minute = valuesFile.minuteFile;
+                    timeValueInFile.Second = valuesFile.secondFile;
+                    update.timeValueInFiles.Update(timeValueInFile);
+                    update.SaveChanges();
+                }
             }
         }
     }  
