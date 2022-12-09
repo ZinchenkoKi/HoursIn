@@ -13,20 +13,20 @@ namespace Timers
     public  class timerOperation // работа таймера
     {
         static valuesTamer valuesTamer = new valuesTamer(0, 0, 0);
-        static valuesFile valuesFile = new valuesFile(0, 0, 0);
+        static valuesDatabase valuesDatabase = new valuesDatabase(0, 0, 0);
 
-        public int allHours()
+        public int totalHours()
         {
-            reedfiles(ref valuesFile);
-            int d = valuesFile.hourFile;
-            return d;
+            datarReading(ref valuesDatabase);
+            int numberHours = valuesDatabase.hourFile;
+            return numberHours;
         }
 
-        public void saveTimer() // сохранение времени
+        public void savingTimerValues() // сохранение времени
         {
-            reedfiles(ref valuesFile);
-            sumTimes(ref valuesFile, ref valuesTamer);
-            writeInFile(ref valuesFile);
+            datarReading(ref valuesDatabase);
+            sumTimes(ref valuesDatabase, ref valuesTamer);
+            writeInFile(ref valuesDatabase);
         }
 
         public  void timerСounting(Label label, Label label2, Label label3)
@@ -79,7 +79,7 @@ namespace Timers
             }
             return values;
         }
-        void reedfiles(ref valuesFile valuesFile)  // считывние времени из файла
+        void datarReading(ref valuesDatabase valuesFile)  // считывние времени из файла
         {
             using (Context reed = new Context()) // reed values file
             {
@@ -93,7 +93,7 @@ namespace Timers
             } 
         }
 
-        valuesFile sumTimes(ref valuesFile valuesFile, ref valuesTamer valuesTamer) // суммирование времени таймера
+        valuesDatabase sumTimes(ref valuesDatabase valuesFile, ref valuesTamer valuesTamer) // суммирование времени таймера
         {
             valuesFile.hourFile = valuesFile.hourFile + valuesTamer.hourTimer;
             valuesFile.minuteFile = timeRecalculation(valuesFile.minuteFile,ref valuesFile.hourFile) + valuesTamer.minuteTimer;
@@ -101,7 +101,7 @@ namespace Timers
             return valuesFile;
         }
 
-        void writeInFile(ref valuesFile valuesFile) // записть времени в файл
+        void writeInFile(ref valuesDatabase valuesFile) // записть времени в файл
         {
             using (Context update = new Context())
             {

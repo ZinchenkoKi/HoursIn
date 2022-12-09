@@ -11,7 +11,7 @@ namespace Timers
             InitializeComponent();
             timer1.Interval = 1000;
             timerOperation t = new timerOperation();
-            label6.Text = t.allHours() + " часов всего";
+            label6.Text = t.totalHours() + " часов всего";
         }
             private void timer1_Tick(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace Timers
         private void button2_Click_1(object sender, EventArgs e)
         {
             timerOperation t = new timerOperation();
-            t.saveTimer();
+            t.savingTimerValues();
             this.Close();
         }
 

@@ -2,11 +2,11 @@
 
 namespace Timers
 {
-    struct valuesFile //заначение времени в файле
+    struct valuesDatabase //заначение времени в файле
     {
         public int hourFile, minuteFile, secondFile;
 
-        public valuesFile(int hourFile, int minuteFile, int secondFile)
+        public valuesDatabase(int hourFile, int minuteFile, int secondFile)
         {
             this.hourFile = hourFile;
             this.minuteFile = minuteFile;
