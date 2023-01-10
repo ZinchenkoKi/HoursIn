@@ -9,8 +9,8 @@ namespace Timers.Entities
 {
     internal class Context : DbContext
     {
-        public DbSet<timeValueInFile> timeValueInFiles { get; set; } = null!;
-
+        public DbSet<TimeValueInFile> timeValueInFiles { get; set; } = null!;
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Timer2;Username=postgres;Password=1234567");       

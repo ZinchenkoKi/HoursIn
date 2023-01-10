@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Timers.Entities
 {
-    public class timeValueInFile
+    public class TimeValueInFile
     {
         public int Id { get; set; }
         public int Hours { get; set; }

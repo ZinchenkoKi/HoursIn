@@ -2,6 +2,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using System.IO;
 using Timers.Entities;
 
+
 namespace Timers
 {
     public partial class Form1 : Form
@@ -10,12 +11,10 @@ namespace Timers
         {
             InitializeComponent();
             timer1.Interval = 1000;
-            timerOperation t = new timerOperation();
-            label6.Text = t.allHours() + " ÷àñîâ âñåãî";
         }
             private void timer1_Tick(object sender, EventArgs e)
         {
-            timerOperation t = new timerOperation();
+            TimerOperation t = new TimerOperation();
             t.timerÑounting(label3, label2, label1);
         }
 
@@ -38,29 +37,21 @@ namespace Timers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            TimerOperation t = new TimerOperation();
+            label7.Text = t.AllHours() + "";
         }
 
-        private void button1_Click_1(object sender, EventArgs e) // strart timer
+
+        private void button1_Click(object sender, EventArgs e)
         {
             timervalues(button1);
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            timerOperation t = new timerOperation();
-            t.saveTimer();
+            TimerOperation t = new TimerOperation();
+            t.SaveTimer();
             this.Close();
-        }
-
-        private void label5_Click(object sender, EventArgs e) // add new task
-        {
-            //using (Context add = new Context()) //add values time
-            //{
-            //    timeValueInFile timeValueInFile = new timeValueInFile { Hours = 12, Minute = 23, Second = 33 };
-            //    add.timeValueInFiles.Add(timeValueInFile);
-            //    add.SaveChanges();
-            //}
         }
     } 
 }

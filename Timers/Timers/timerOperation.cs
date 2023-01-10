@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,31 +12,81 @@ using Timers.Entities;
 
 namespace Timers
 {
-    public  class timerOperation // работа таймера
+    public  class TimerOperation // работа таймера
     {
-        static valuesTamer valuesTamer = new valuesTamer(0, 0, 0);
-        static valuesFile valuesFile = new valuesFile(0, 0, 0);
+        static TimeValueInProgram valuesTamer = new TimeValueInProgram(0, 0, 0);
+        static TimeValueInDataBase valuesFile = new TimeValueInDataBase(0, 0, 0);
 
-        public int allHours()
+        public int AllHours()
         {
-            reedfiles(ref valuesFile);
-            int d = valuesFile.hourFile;
+            Reedfiles(ref valuesFile);
+            int d = valuesFile.hourInDataBase;
             return d;
         }
 
-        public void saveTimer() // сохранение времени
+
+
+        public void SaveTimer()
         {
-            reedfiles(ref valuesFile);
-            sumTimes(ref valuesFile, ref valuesTamer);
-            writeInFile(ref valuesFile);
+            Reedfiles(ref valuesFile);
+            SumTimes(ref valuesFile, ref valuesTamer);
+            WriteInFile(ref valuesFile);
         }
 
-        public  void timerСounting(Label label, Label label2, Label label3)
+        int TimeRecalculation(int values, ref int valuesFile)// пересчет времени
         {
-            timeCounting(ref valuesTamer, label, label2, label3);
+            if (values > 60)
+            {
+                valuesFile = (values / 60) + Convert.ToInt32(valuesFile);
+                values = values % 60;
+            }
+            return values;
+        }
+        void Reedfiles(ref TimeValueInDataBase valuesFile)  // считывние времени из файла
+        {
+            using (Context reed = new Context()) // reed values file
+            {
+                var times = reed.timeValueInFiles.ToList();
+                foreach (TimeValueInFile u in times)
+                {
+                    valuesFile.hourInDataBase = u.Hours;
+                    valuesFile.minuteInDataBase = u.Minute;
+                    valuesFile.secondInDataBase = u.Second;
+                }
+            }
         }
 
-        void timevalues(ref int valuestime, Label label) // элимент счетчика
+        TimeValueInDataBase SumTimes(ref TimeValueInDataBase valuesFile, ref TimeValueInProgram valuesTamer) // суммирование времени таймера
+        {
+            valuesFile.hourInDataBase = valuesFile.hourInDataBase + valuesTamer.hourInProgram;
+            valuesFile.minuteInDataBase = TimeRecalculation(valuesFile.minuteInDataBase, ref valuesFile.hourInDataBase) + valuesTamer.minuteInProgram;
+            valuesFile.secondInDataBase = TimeRecalculation(valuesFile.secondInDataBase, ref valuesFile.minuteInDataBase) + valuesTamer.secondInProgram;
+            return valuesFile;
+        }
+
+        void WriteInFile(ref TimeValueInDataBase valuesFile) // записть времени в файл
+        {
+            using (Context update = new Context())
+            {
+                TimeValueInFile? timeValueInFile = update.timeValueInFiles.FirstOrDefault();
+                if (timeValueInFile != null)
+                {
+                    timeValueInFile.Hours = valuesFile.hourInDataBase;
+                    timeValueInFile.Minute = valuesFile.minuteInDataBase;
+                    timeValueInFile.Second = valuesFile.secondInDataBase;
+                    update.timeValueInFiles.Update(timeValueInFile);
+                    update.SaveChanges();
+                }
+            }
+        }
+
+        public void timerСounting(Label label, Label label2, Label label3)
+        {
+
+            TimeCounting(ref valuesTamer, label, label2, label3);
+        }
+
+        void TimeValues(ref int valuestime, Label label) 
         {
             valuestime++;
             if (valuestime < 10)
@@ -46,73 +98,26 @@ namespace Timers
         }
 
 
-        void timeCounting(ref valuesTamer valuesTamer, Label labelOne, Label labelTwo, Label labelTree) // общий счетчик
+        void TimeCounting(ref TimeValueInProgram valuesTamer, Label labelOne, Label labelTwo, Label labelTree) // общий счетчик
         {
-            if (valuesTamer.secondTimer < 59)
+            if (valuesTamer.secondInProgram < 59)
             {
-                timevalues(ref valuesTamer.secondTimer, labelOne);
+                TimeValues(ref valuesTamer.secondInProgram, labelOne);
             }
             else
             {
-                if (valuesTamer.minuteTimer < 59)
+                if (valuesTamer.minuteInProgram < 59)
                 {
-                    timevalues(ref valuesTamer.minuteTimer, labelTwo);
-                    valuesTamer.secondTimer = 0;
+                    TimeValues(ref valuesTamer.minuteInProgram, labelTwo);
+                    valuesTamer.secondInProgram = 0;
                     labelOne.Text = "00";
                     
                 }
                 else
                 {
-                    timevalues(ref valuesTamer.hourTimer, labelTree);
-                    valuesTamer.minuteTimer = 0;
+                    TimeValues(ref valuesTamer.hourInProgram, labelTree);
+                    valuesTamer.minuteInProgram = 0;
                     labelTwo.Text = "00";
-                }
-            }
-        }
-
-        int timeRecalculation(int values, ref int valuesFile)// пересчет времени
-        {
-            if (values > 60)
-            {
-                valuesFile = (values / 60) + Convert.ToInt32(valuesFile);
-                values = values % 60;
-            }
-            return values;
-        }
-        void reedfiles(ref valuesFile valuesFile)  // считывние времени из файла
-        {
-            using (Context reed = new Context()) // reed values file
-            {
-                var times = reed.timeValueInFiles.ToList();
-                foreach (timeValueInFile u in times)
-                {
-                    valuesFile.hourFile = u.Hours;
-                    valuesFile.minuteFile = u.Minute;
-                    valuesFile.secondFile = u.Second;
-                }
-            } 
-        }
-
-        valuesFile sumTimes(ref valuesFile valuesFile, ref valuesTamer valuesTamer) // суммирование времени таймера
-        {
-            valuesFile.hourFile = valuesFile.hourFile + valuesTamer.hourTimer;
-            valuesFile.minuteFile = timeRecalculation(valuesFile.minuteFile,ref valuesFile.hourFile) + valuesTamer.minuteTimer;
-            valuesFile.secondFile = timeRecalculation(valuesFile.secondFile, ref valuesFile.minuteFile) + valuesTamer.secondTimer;
-            return valuesFile;
-        }
-
-        void writeInFile(ref valuesFile valuesFile) // записть времени в файл
-        {
-            using (Context update = new Context())
-            {
-                timeValueInFile? timeValueInFile = update.timeValueInFiles.FirstOrDefault();
-                if (timeValueInFile != null)
-                {
-                    timeValueInFile.Hours = valuesFile.hourFile;
-                    timeValueInFile.Minute = valuesFile.minuteFile;
-                    timeValueInFile.Second = valuesFile.secondFile;
-                    update.timeValueInFiles.Update(timeValueInFile);
-                    update.SaveChanges();
                 }
             }
         }
