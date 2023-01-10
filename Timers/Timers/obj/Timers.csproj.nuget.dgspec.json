@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Progects\\HoursIn\\Timers\\Timers\\Timers.csproj": {}
+    "C:\\c#_pogekts\\HoursIn\\Timers\\Timers\\Timers.csproj": {}
   },
   "projects": {
-    "D:\\Progects\\HoursIn\\Timers\\Timers\\Timers.csproj": {
+    "C:\\c#_pogekts\\HoursIn\\Timers\\Timers\\Timers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Progects\\HoursIn\\Timers\\Timers\\Timers.csproj",
+        "projectUniqueName": "C:\\c#_pogekts\\HoursIn\\Timers\\Timers\\Timers.csproj",
         "projectName": "Timers",
-        "projectPath": "D:\\Progects\\HoursIn\\Timers\\Timers\\Timers.csproj",
-        "packagesPath": "C:\\Users\\Кирилл\\.nuget\\packages\\",
-        "outputPath": "D:\\Progects\\HoursIn\\Timers\\Timers\\obj\\",
+        "projectPath": "C:\\c#_pogekts\\HoursIn\\Timers\\Timers\\Timers.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\c#_pogekts\\HoursIn\\Timers\\Timers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Кирилл\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -83,7 +83,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

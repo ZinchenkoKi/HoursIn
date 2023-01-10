@@ -11,11 +11,17 @@ namespace Timers
         {
             InitializeComponent();
             timer1.Interval = 1000;
+
+            
+            //label6.Text = t.totalHours() + " ÷àñîâ âñåãî";
+
         }
-            private void timer1_Tick(object sender, EventArgs e)
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            TimeValueInProgram timeValueInProgram = new TimeValueInProgram(0,0,0);
             TimerOperation t = new TimerOperation();
-            t.timerÑounting(label3, label2, label1);
+            t.TimeCounting(timeValueInProgram, label1, label2, label3);
         }
 
 
@@ -37,8 +43,8 @@ namespace Timers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TimerOperation t = new TimerOperation();
-            label7.Text = t.AllHours() + "";
+            //TimerOperation t = new TimerOperation();
+            //label7.Text = t.AllHours() + "";
         }
 
 
@@ -49,8 +55,13 @@ namespace Timers
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TimerOperation t = new TimerOperation();
-            t.SaveTimer();
+
+            //TimerOperation t = new TimerOperation();
+            //t.SaveTimer();
+
+            //TimerOperation t = new TimerOperation();
+            //t.savingTimerValues();
+
             this.Close();
         }
     } 
